@@ -32,7 +32,11 @@ namespace Semesrovka_Var6
         static string _filePatch = @"C:\GitRepos\Semestrovka\polinom.txt";
         static void Main(string[] args)
         {
-            List<Monom> monoms = Parser.GetMonoms(_filePatch);
+            Polinom polinom = new Polinom(Parser.GetMonoms(_filePatch));
+
+            Console.WriteLine(polinom);
+            polinom.Combine();
+            Console.WriteLine(polinom);
 
             Console.ReadKey();
         }
