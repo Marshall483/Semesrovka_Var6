@@ -29,9 +29,10 @@ namespace Semesrovka_Var6
  
     class Program
     {
+        static string _filePatch = @"C:\GitRepos\Semestrovka\polinom.txt";
         static void Main(string[] args)
         {
-
+            List<Monom> monoms = Parser.GetMonoms(_filePatch);
 
             Console.ReadKey();
         }

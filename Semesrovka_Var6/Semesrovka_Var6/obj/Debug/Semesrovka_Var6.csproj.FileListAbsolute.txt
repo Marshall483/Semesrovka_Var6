@@ -1,0 +1,6 @@
+C:\GitRepos\Semestrovka\Semesrovka_Var6\Semesrovka_Var6\bin\Debug\Semesrovka_Var6.exe.config
+C:\GitRepos\Semestrovka\Semesrovka_Var6\Semesrovka_Var6\bin\Debug\Semesrovka_Var6.exe
+C:\GitRepos\Semestrovka\Semesrovka_Var6\Semesrovka_Var6\bin\Debug\Semesrovka_Var6.pdb
+C:\GitRepos\Semestrovka\Semesrovka_Var6\Semesrovka_Var6\obj\Debug\Semesrovka_Var6.csprojAssemblyReference.cache
+C:\GitRepos\Semestrovka\Semesrovka_Var6\Semesrovka_Var6\obj\Debug\Semesrovka_Var6.exe
+C:\GitRepos\Semestrovka\Semesrovka_Var6\Semesrovka_Var6\obj\Debug\Semesrovka_Var6.pdb
