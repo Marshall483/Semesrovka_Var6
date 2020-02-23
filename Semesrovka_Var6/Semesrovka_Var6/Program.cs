@@ -27,15 +27,16 @@ namespace Semesrovka_Var6
 
   void deleteOdd(): удалить из списка все элементы с нечетными коэффициентами */
  
-    class Program
+    class Program // 5,5-5 2,1-6 7-2 3-5 1,96-5 3-4 2-3 1,7-1 1,56-1 1-0
     {
         static string _filePatch = @"C:\GitRepos\Semestrovka\polinom.txt";
         static void Main(string[] args)
         {
             Polinom polinom = new Polinom(Parser.GetMonoms(_filePatch));
 
+
             Console.WriteLine(polinom);
-            polinom.Combine();
+            Console.WriteLine(polinom.Value(2));
             Console.WriteLine(polinom);
 
             Console.ReadKey();
