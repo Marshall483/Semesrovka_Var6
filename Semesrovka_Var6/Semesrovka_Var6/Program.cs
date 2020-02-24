@@ -29,13 +29,14 @@ namespace Semesrovka_Var6
  
     class Program // 5,5-5 2,1-6 7-2 3-5 1,96-5 3-4 2-3 1,7-1 1,56-1 1-0
     {
-        static readonly string _filePatch = @"C:\GitRepos\Semestrovka\polinom.txt";
-        static readonly string __filePatch = @"C:\GitRepos\Semestrovka\polinom2.txt";
+        static readonly string _filePatch = @"C:\GitRepos\Semestrovka\polinom.txt"; // 5,5-5 2,1-6 7-2 3-5 1,96-5 3-4 2-3 1,7-1 1,56-1
+        static readonly string __filePatch = @"C:\GitRepos\Semestrovka\polinom2.txt";  // 7-3 2-1 3-0
+
         static void Main()
         {
             IParser parser = new Parser();
 
-            Polinom polinom = new Polinom(parser.GetMonoms(_filePatch));
+            Polinom polinom = new Polinom(parser.GetMonomsWichPatch(_filePatch));
             Console.WriteLine("Полином 1: \n" + polinom);
 
             Polinom superPolinom = new Polinom(__filePatch, parser);
@@ -60,6 +61,9 @@ namespace Semesrovka_Var6
             polinom.DeleteOdd();
             Console.WriteLine("Полином 1: \n" + polinom);
 
+            Console.WriteLine("Полином1 + Полином 2 = ");
+            polinom.Sum(superPolinom);
+            Console.WriteLine(polinom);
 
             Console.ReadKey();
         }

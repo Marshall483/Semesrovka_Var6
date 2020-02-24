@@ -13,7 +13,7 @@ namespace Semesrovka_Var6
 
         public Polinom(List<Monom> monoms) { _polinom = monoms; _polinom.Sort(SortByPower); } // создать по готовому списку
 
-        public Polinom(string filePatch, IParser parser) { _polinom = parser.GetMonoms(filePatch); _polinom.Sort(SortByPower); }// создать по патчу и парсеру  
+        public Polinom(string filePatch, IParser parser) { _polinom = parser.GetMonomsWichPatch(filePatch); _polinom.Sort(SortByPower); }// создать по патчу и парсеру  
 
         public void Insert(float coef, int deg)
         {
