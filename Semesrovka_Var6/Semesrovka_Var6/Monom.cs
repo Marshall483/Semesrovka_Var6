@@ -18,5 +18,13 @@ namespace Semesrovka_Var6
             Power = power;
         }
 
+        public override bool Equals(object obj)
+        {
+            Monom mon = obj as Monom;
+
+            if (mon.Power.Equals(Power) && mon.Value.Equals(Value))
+                return true;
+            return false;
+        }
     }
 }

@@ -29,15 +29,37 @@ namespace Semesrovka_Var6
  
     class Program // 5,5-5 2,1-6 7-2 3-5 1,96-5 3-4 2-3 1,7-1 1,56-1 1-0
     {
-        static string _filePatch = @"C:\GitRepos\Semestrovka\polinom.txt";
-        static void Main(string[] args)
+        static readonly string _filePatch = @"C:\GitRepos\Semestrovka\polinom.txt";
+        static readonly string __filePatch = @"C:\GitRepos\Semestrovka\polinom2.txt";
+        static void Main()
         {
-            Polinom polinom = new Polinom(Parser.GetMonoms(_filePatch));
+            IParser parser = new Parser();
 
+            Polinom polinom = new Polinom(parser.GetMonoms(_filePatch));
+            Console.WriteLine("Полином 1: \n" + polinom);
 
-            Console.WriteLine(polinom);
-            Console.WriteLine(polinom.Value(2));
-            Console.WriteLine(polinom);
+            Polinom superPolinom = new Polinom(__filePatch, parser);
+            Console.WriteLine("Полином 2: \n" + superPolinom);
+
+            polinom.Combine();
+            Console.WriteLine("Полином 1 после приведения подобных членов: \n" + polinom);
+
+            superPolinom.Insert(3, 3);
+            Console.WriteLine("Полином 2 после вставки монома вида 3X^3 : \n" + superPolinom);
+
+            superPolinom.Combine();
+            Console.WriteLine("Полином 2 после приведения подобных членов: \n" + superPolinom);
+
+            Console.WriteLine("Возьмём производную у 2 полинома:");
+            superPolinom.Derivate();
+            Console.WriteLine("Полином 2: \n" + superPolinom);
+
+            Console.WriteLine("Теперь вычислим его значение в точке х = 2 : \nP`n(2) = " + superPolinom.Value(2) );
+
+            Console.WriteLine("Удалим нечетные элементы из 1 полинома :");
+            polinom.DeleteOdd();
+            Console.WriteLine("Полином 1: \n" + polinom);
+
 
             Console.ReadKey();
         }
